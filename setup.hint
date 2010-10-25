@@ -1,0 +1,8 @@
+category: Java
+requires: java-javahelp2 java-servlet-api
+sdesc: "JavaTest harness"
+ldesc: "The JT harness is based on Oracle's JavaTest harness. The JT 
+harness is a general purpose, fully-featured, flexible, and configurable 
+test harness very well suited for most types of unit testing. Originally 
+developed as a test harness to run TCK test suites, it has since evolved 
+into a general purpose test platform."

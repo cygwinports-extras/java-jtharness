@@ -1,0 +1,20 @@
+JAVA_CLASSPATH="jhall.jar:servlet-api.jar"
+SVN_URI="https://jtharness.dev.java.net/svn/jtharness"
+SVN_TAG="jtharness-${PV[1]}_${PV[2]}_${PV[3]}-MR1-Rel-${PV#*_}/code"
+inherit ant svn
+
+DESCRIPTION="JavaTest harness"
+HOMEPAGE="https://jtharness.dev.java.net/"
+
+ANT_BUILD_XML="build/build.xml"
+ANT_BUILD_ARGS="
+	-DBUILD_DIR=dist
+	-Djhalljar=${JAVA_DIR}/jhall.jar
+	-Dservletjar=${JAVA_DIR}/servlet-api.jar
+	-Djcommjar=${JAVA_DIR}/comm.jar
+"
+ANT_BUILD_TARGETS="jar javadoc"
+ANT_INSTALL_JARS="dist/binaries/lib/javatest.jar"
+ANT_INSTALL_JAVADOC="dist/javadoc"
+
+DOCS="legal/*.txt"
